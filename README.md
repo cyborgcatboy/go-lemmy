@@ -1,5 +1,11 @@
 # Go-Lemmy
 
+### FORK!
+
+this repo is fork meow!! for upstream go see [go.elara.ws/go-lemmy] meow kthxbai
+
+---
+
 [![Go Reference](https://pkg.go.dev/badge/go.arsenm.dev/go-lemmy.svg)](https://pkg.go.dev/go.elara.ws/go-lemmy)
 
 Go bindings to the [Lemmy](https://join-lemmy.org) API, automatically generated from Lemmy's source code using the generator in [cmd/gen](cmd/gen).
