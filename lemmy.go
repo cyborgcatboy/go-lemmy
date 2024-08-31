@@ -18,7 +18,7 @@ var ErrNoToken = errors.New("the server didn't provide a token value in its resp
 
 // Client is a client for Lemmy's HTTP API
 type Client struct {
-	client  *http.Client
+	Client  *http.Client
 	baseURL *url.URL
 	Token   string
 }
@@ -35,7 +35,7 @@ func NewWithClient(baseURL string, client *http.Client) (*Client, error) {
 		return nil, err
 	}
 	u = u.JoinPath("/api/v3")
-	return &Client{baseURL: u, client: client}, nil
+	return &Client{baseURL: u, Client: client}, nil
 }
 
 // ClientLogin logs in to Lemmy by calling the login endpoint, and
@@ -84,7 +84,7 @@ func (c *Client) req(ctx context.Context, method string, path string, data, resp
 		req.Header.Add("Authorization", "Bearer "+c.Token)
 	}
 
-	res, err := c.client.Do(req)
+	res, err := c.Client.Do(req)
 	if err != nil {
 		return nil, err
 	}
@@ -127,7 +127,7 @@ func (c *Client) getReq(ctx context.Context, method string, path string, data, r
 		req.Header.Add("Authorization", "Bearer "+c.Token)
 	}
 
-	res, err := c.client.Do(req)
+	res, err := c.Client.Do(req)
 	if err != nil {
 		return nil, err
 	}

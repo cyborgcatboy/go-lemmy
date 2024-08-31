@@ -1,4 +1,4 @@
-module go.elara.ws/go-lemmy
+module github.com/cyborgcatboy/go-lemmy
 
 go 1.19
 
@@ -6,11 +6,12 @@ require (
 	github.com/dave/jennifer v1.6.0
 	github.com/google/go-querystring v1.1.0
 	github.com/tidwall/gjson v1.17.0
+	go.elara.ws/go-lemmy v0.19.0
 	go.elara.ws/logger v0.0.0-20230421022458-e80700db2090
-	golang.org/x/exp v0.0.0-20230105000112-eab7a2c85304
 )
 
 require (
+	github.com/google/go-cmp v0.5.8 // indirect
 	github.com/gookit/color v1.5.1 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
 	github.com/tidwall/match v1.1.1 // indirect
